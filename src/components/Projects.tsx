@@ -106,10 +106,12 @@ export function Projects() {
             <Card key={project.title} className="overflow-hidden">
               <div className="relative h-48">
               <Image
-                  src={project.image}
-                  alt="Example Image" 
-                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"priority 
-                />
+              src={project.image}
+              alt={project.title}
+              width={400}
+              height={300}
+              className="object-cover"
+              />
               </div>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
