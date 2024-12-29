@@ -89,7 +89,7 @@ export function Projects() {
     {
       title: "API Use",
       description: "A responsive API Use built with Next.js and Tailwind CSS",
-      image: "/p10.jpg",
+      image: "./p10.jpg",
       github: "https://github.com/Syeda-Aliza-Masood/API-Class-Assignment",
       demo: "https://api-class-assignment.vercel.app/",
       tags: ["Next.js", "Tailwind CSS", "TypeScript"],
@@ -105,11 +105,10 @@ export function Projects() {
           {projects.map((project) => (
             <Card key={project.title} className="overflow-hidden">
               <div className="relative h-48">
-                <Image
+              <Image
                   src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
+                  alt="Example Image" 
+                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"priority 
                 />
               </div>
               <CardHeader>
