@@ -5,7 +5,16 @@ import { ExternalLink, Github } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 export function Projects() {
-  const projects = [
+  interface DataOfObj {
+    title: string 
+    description: string 
+    image: string 
+    github: string 
+    demo: string 
+    tags: string[];  // Changed to string[] for correct typing of tags
+  };
+
+  const projects: DataOfObj[] = [
     {
       title: "E-commerce Platform",
       description: "A responsive full-stack e-commerce platform built with Next.js",
@@ -94,7 +103,7 @@ export function Projects() {
       demo: "https://api-class-assignment.vercel.app/",
       tags: ["Next.js", "Tailwind CSS", "TypeScript"],
     },
-  ]
+  ];
 
   return (
     <section id="projects" className="py-12 md:py-20 bg-muted/50">
@@ -147,5 +156,5 @@ export function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
